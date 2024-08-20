@@ -126,39 +126,39 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("O morador de rua de antes te reconhece como a mulher de antes")
                 alert("Ele o agradece por mais cedo")
                 alert("Você ganhou 5 de vida")
-                vida += 5
-                historia++
+                vida += 5 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
 
             else if (inventario.includes("ignorou o morador de rua")) {
                 alert("O morador de rua de antes te reconhece como a mulher de antes")
                 alert("Assim como você fez antes, ele e os outros moradores de rua te ignoram")
-                vida -= 10
-                inventario.splice(0, 1)
-                historia++
+                vida -= 10 // Diminue a vida do jogador
+                inventario.splice(0, 1) // Remove um item do inventario
+                historia++ // Aumenta a variavel historia
 
             }
             else {
                 alert("O morador de rua te reconhece como a mulher que chutou ele")
                 alert("Ele manda os outros moradores de rua te chutarem por antes")
                 alert("Você perdeu 10 de vida")
-                vida -= 10
-                historia++
+                vida -= 10 // Diminue a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
         }
-        else if (historia == 5) {
+        else if (historia == 5) { // Verifica qual parte da historia sera reproduzida
             alert("Depois de encontrar os moradores rua você volta para casa")
             alert("Quando você chega em casa, sua filha ainda não lavou a louça")
             let pergunta4 = Number(prompt("O que você faz: \n(1) lava a louça você mesmo \n(2) Castigo \n(3) Pergunta por que ela não lavou a louça"))
             if (pergunta4 == 1) {
                 alert("Decepicionada com a sua filha, você começa a lavar a louça")
                 alert("Você perdeu 2 de vida")
-                vida -= 2
-                historia++
+                vida -= 2 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
             else if (pergunta4 == 2) {
                 alert("Após encontrar as louças ainda sujas, você entra no quarto de sua filha e a coloca de castigo e manda ela lavar a louça na hora")
-                historia++
+                historia++ // Aumenta a variavel historia
             }
             else {
                 alert("Você entra no quarta de sua filha e pergunta por que ela não lavou a louça")
@@ -168,21 +168,21 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                     alert("Você decide perdoar a sua filha")
                     alert("Ela te da um abraço e vai lavar a louça depois disso")
                     alert("Você ganhou 20 de vida")
-                    vida += 20
-                    historia++
+                    vida += 20 // Aumenta a vida do jogador
+                    historia++ // Aumenta a variavel historia
                 }
                 else {
                     alert("Você não perdoa a sua filha")
                     alert("Ela te manda a merda por não entender ela e você a coloca de castigo")
                     alert("Você perdeu 20 de vida")
-                    vida -= 20
-                    historia++
+                    vida -= 20 // Diminue a vida do jogador
+                    historia++ // Aumenta a variavel historia
                 }
 
             }
 
         }
-        else if (historia == 6) {
+        else if (historia == 6) { // Verifica qual parte da historia sera reproduzida
             alert("Depois das louças, você decide tomar banho e ir dormir")
             alert("No dia seguinte você acorda com uma mensagem do seu treinador")
             alert("Treinador: \n Mahboubeh, você foi convidada a participar das olimpiadas de 2024, no time dos refugiados !")
@@ -195,9 +195,9 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("Depois do treino você vai para casa e vai dormir")
                 alert("Você ganhou o item: cansaço")
                 alert("Você perdeu 1 de vida")
-                inventario.push("cansaço")
-                vida -= 1
-                historia++
+                inventario.push("cansaço") // Coloca um item no inventario
+                vida -= 1 // Diminue a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
             else if (pergunta5 == 2) {
                 alert("Você decide sair para fazer alguma coisa")
@@ -208,9 +208,9 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("Você cai no sono e acorda apenas quando está de noite, você volta para casa abraça a sua filha e vai dormir novamente")
                 alert("Você ganhou o item: paz de espirito")
                 alert("Voce ganhou 20 de vida")
-                inventario.push("paz de espirito")
-                vida += 20
-                historia++
+                inventario.push("paz de espirito") // Coloca um item no inventario
+                vida += 20 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
 
             }
             else {
@@ -219,12 +219,12 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("Depois disso você vai para o quarto e começa a dormir")
                 alert("Você ganhou o item: descanso")
                 alert("Você ganhou 5 de vida")
-                inventario.push("descanso")
-                vida += 5
-                historia++
+                inventario.push("descanso") // Coloca um item no inventario
+                vida += 5 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
         }
-        else if (historia == 7) {
+        else if (historia == 7) { // Verifica qual parte da historia sera reproduzida
             alert("No dia seguinte, você toma cafe da manha com sua filha e vai direto para o ginasio")
             alert("Lá você encontra o seu treinador e o representante do time de refugiados")
             if (inventario.includes("descanso")) {
@@ -232,8 +232,8 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("Como você estava descansada você executou os golpes corretamentes")
                 alert("Você passou no teste")
                 alert("Você ganhou 20 de vida")
-                vida += 20
-                historia++
+                vida += 20 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
 
             }
             else if (inventario.includes("paz de espirito")) {
@@ -242,8 +242,8 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("O representante praticamente implorou para você entrar no time")
                 alert("Você passou no teste")
                 alert("Você ganhou 30 de vida")
-                vida += 30
-                historia++
+                vida += 30 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
             else {
                 alert("O representante pede para você fazer uma demonstração de golpes com o seu treinador")
@@ -257,7 +257,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
             }
 
         }
-        else if (historia == 8) {
+        else if (historia == 8) { // Verifica qual parte da historia sera reproduzida
             alert("Os dias vão se passando depos do teste")
             alert("Você continua treinando para as olimpiadas toda semana")
             let pergunta6 = Number(prompt("O que você quer focar nos treinos: \n(1) Defesa \n(2) Ataque"))
@@ -265,18 +265,20 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 alert("Você decide focar na sua defesa")
                 alert("Graças aos seus treinos de defesa e seus treinos de levantamento de peso, sua defesa fica extremamente eficaz")
                 alert("Você se sente preparada para as olimpiadas de 2024")
-                alert("Você ganhou o item: confiança")
-                historia++
+                alert("Você ganhou o item: confiança") 
+                inventario.push("confiança") // Coloca um item no inventario
+                historia++ // Aumenta a variavel historia
             }
             else {
                 alert("Você decide focar na sua ofensiva")
                 alert("Graças aos seus treinos de ataque e sus treinos de levantamento de peso, seus ataques ficam formidaveis")
                 alert("Você se sente preparada para as olimpiadas de 2024")
                 alert("Você ganhou o item: confiança")
-                historia++
+                inventario.push("confiança") // Coloca um item no inventario
+                historia++ // Aumenta a variavel historia
             }
         }
-        else {
+        else { // Verifica qual parte da historia sera reproduzida
             alert("Depois de muito tempo treinando...")
             if (vida > 70 && inventario.includes("confiança")) {
                 alert("Você finalmente chegou em paris para as olimpiadas")
