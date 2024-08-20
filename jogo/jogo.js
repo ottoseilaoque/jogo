@@ -1,27 +1,27 @@
-let vida = 50 //variavel global
-let inventario = []//variavel global
-let historia = 1
+let vida = 50 //variavel global que declara a vida do jogador
+let inventario = []//variavel global que guarda os itens do jogo
+let historia = 1//variavel global que faz a historia do jogo andar
 alert("Vamos começar a historia de Mahboubeh Barbari Yharfi")
 
 
 let continuar = true
 
-while (continuar != false) {
+while (continuar != false) { //While para determinar quando o jogo acaba
     let menu = (Number(prompt('O que deseja fazer: \n (1) Historia \n (2) Checar status \n (3) Desistir \n (4) Ultimo checkpoint')))
     switch (menu) {
-        case 1:
+        case 1: //Primeira opção do menu
             primeira()
             break
-        case 2:
-            segunda()
+        case 2: //Segunda opção do menu
+            segunda() 
             break
-        case 3:
+        case 3: //Terceira opção do menu
             alert("Você desistiu de jogar")
             alert("Mesmo assim, obrigado por jogar")
             alert("Feito por: Otto Seibt Cambôa")
             continuar = false
             break
-        case 4:
+        case 4: //Quarta opção do menu
             alert("Você voltou ao ultimo checkpoint")
             alert("Você ganhou 1 de vida")
             vida += 1
@@ -30,31 +30,31 @@ while (continuar != false) {
             break
 
     }
-    function segunda() {
+    function segunda() { //Essa função mostra os status do personagem, sua vida e seu inventario e retorna para o menu
         alert("Sua vida é: " + vida)
         alert("No seu inventario tem os itens: " + inventario)
         menu
     }
 
-    function primeira() {
+    function primeira() { // Essa função controla o decorrer da historia do jogo
 
 
-        if (historia == 1) {
+        if (historia == 1) { // Verifica qual parte da historia será reproduzida
             alert("Você é uma mulher iraniana chamada Mahboubeh Barbari Yharfi")
             alert("Você e sua filha acabarem de sair de seu pais de origem para morrar na alemanha")
             let pergunta1 = Number(prompt("Sua filha está na cozinha o que você quer fazer: \n(1) Comprimentar ela e sair \n(2) Tomar café com ela \n(3) Mandar ela lavar louça"))
 
-            if (pergunta1 == 1) {
+            if (pergunta1 == 1) { // Primeira opção da primeira pergunta
                 alert("Você abraça a sua filha e a deseja um bom dia, pede para ela lavar a louça e você sai de casa")
                 alert("Você ganhou 5 de vida")
                 vida += 5
                 historia++
-            } else if (pergunta1 == 2) {
+            } else if (pergunta1 == 2) { // Segunda opção da primeira pergunta
                 alert("Você para e toma café da manha com ela, pede para ela lavar a louça e depois você sai de casa")
                 alert("Você ganhou 10 de vida")
                 vida += 10
                 historia++
-            } else {
+            } else { // Terceira opção da primeira pergunta
                 alert("Você nem deu bom dia para a sua filha e ja mandou ela lavar a louça")
                 alert("Ela não gostou disso")
                 alert("Você perdeu 10 de vida")
@@ -62,13 +62,13 @@ while (continuar != false) {
                 historia++
             }
         }
-        else if (historia == 2) {
+        else if (historia == 2) { // Verifica qual parte da historia sera reproduzida
             alert("Depois de você sair de casa, você começa a ir em direção ao ginasio")
-            alert("No caminho você encontra um mendigo todo fudido")
-            let pergunta2 = Number(prompt("No caminho você encontra um mendigo todo fudido o que você faz: \n(1) Dar dinheiro para ele \n(2) Chutar o mendigo \n(3) Ignorar ele e ir embora"))
+            alert("No caminho você encontra um morador de rua")
+            let pergunta2 = Number(prompt("O que você faz: \n(1) Dar dinheiro para ele \n(2) Chutar o morador de rua \n(3) Ignorar ele e ir embora"))
 
             if (pergunta2 == 1) {
-                alert("Você dá dinheiro para o mendigo ele está feliz e te da um presente")
+                alert("Você dá dinheiro para o morador de rua ele está feliz e te da um presente")
                 alert("Você ganhou 5 de vida ")
                 alert("Você ganhou o item: empatia")
                 inventario.push("empatia")
@@ -76,15 +76,15 @@ while (continuar != false) {
                 historia++
             }
             else if (pergunta2 == 2) {
-                alert("Por algum motivo, você chutou o mendigo")
+                alert("Por algum motivo, você chutou o morador de rua")
                 alert("Quem faria isso ?")
                 alert("Você perdeu 10 de vida")
                 vida -= 10
                 historia++
             }
             else {
-                alert("Você ignorou o mendigo e continuo andando")
-                inventario.push("ignorou o mendigo")
+                alert("Você ignorou o morador de rua e continuo andando")
+                inventario.push("ignorou o morador de rua")
                 historia++
             }
         }
@@ -117,34 +117,34 @@ while (continuar != false) {
         }
         else if (historia == 4) {
             alert("Após o treino, você começa voltar para casa")
-            alert("No caminho você encontra o mesmo mendigo de antes")
-            alert("Só que destá vez ele está com outros 5 mendigos")
+            alert("No caminho você encontra o mesmo morador de rua de antes")
+            alert("Só que destá vez ele está com outros 5 moradores de rua")
             if (inventario.includes("empatia")) {
-                alert("O mendigo de antes te reconhece como a mulher de antes")
+                alert("O morador de rua de antes te reconhece como a mulher de antes")
                 alert("Ele o agradece por mais cedo")
                 alert("Você ganhou 5 de vida")
                 vida += 5
                 historia++
             }
 
-            else if (inventario.includes("ignorou o mendigo")) {
-                alert("O mendigo de antes te reconhece como a mulher de antes")
-                alert("Assim como você fez antes, ele e os outros mendigos te ignoram")
+            else if (inventario.includes("ignorou o morador de rua")) {
+                alert("O morador de rua de antes te reconhece como a mulher de antes")
+                alert("Assim como você fez antes, ele e os outros moradores de rua te ignoram")
                 vida -= 10
                 inventario.splice(0, 1)
                 historia++
 
             }
             else {
-                alert("O mendigo te reconhece como a mulher que chutou ele")
-                alert("O mendigo chefe manda os outros mendigo te chutarem por antes")
+                alert("O morador de rua te reconhece como a mulher que chutou ele")
+                alert("Ele manda os outros moradores de rua te chutarem por antes")
                 alert("Você perdeu 10 de vida")
                 vida -= 10
                 historia++
             }
         }
         else if (historia == 5) {
-            alert("Depois de encontrar os mendigos você volta para casa")
+            alert("Depois de encontrar os moradores rua você volta para casa")
             alert("Quando você chega em casa, sua filha ainda não lavou a louça")
             let pergunta4 = Number(prompt("O que você faz: \n(1) lava a louça você mesmo \n(2) Castigo \n(3) Pergunta por que ela não lavou a louça"))
             if (pergunta4 == 1) {
@@ -185,15 +185,15 @@ while (continuar != false) {
             alert("Treinador: \n Mahboubeh, você foi convidada a participar das olimpiadas de 2024, no time dos refugiados !")
             alert("Um representante do time vira amanha para te ver treinando e te convidar formalmente para as olimpiadas")
             alert("Use esse dia para descansar para mostrar seu treinamento totalemente descansada")
-            let pergunta5 = Number(prompt("O que você deseja fazer hoje: \n(1) Descansar em casa \n(2) Sair para fazer alguma coisa \n(3) Ir treinar"))
+            let pergunta5 = Number(prompt("O que você deseja fazer hoje: \n(1) Ir treinar  \n(2) Sair para fazer alguma coisa \n(3) Descansar em casa"))
             if (pergunta5 == 1) {
-                alert("Você decide ficar em casa e descansar")
-                alert("Você se senta no sofa e começa a assitir uma serie durante o dia interio")
-                alert("Depois disso você vai para o quarto e começa a dormir")
-                alert("Você ganhou o item: descanso")
-                alert("Você ganhou 5 de vida")
-                inventario.push("descanso")
-                vida += 5
+                alert("Você decide ir treinar")
+                alert("Você vai para o ginasio e treina a tarde inteira")
+                alert("Depois do treino você vai para casa e vai dormir")
+                alert("Você ganhou o item: cansaço")
+                alert("Você perdeu 1 de vida")
+                inventario.push("cansaço")
+                vida -= 1
                 historia++
             }
             else if (pergunta5 == 2) {
@@ -204,18 +204,20 @@ while (continuar != false) {
                 alert("Você se deita na grama e apenas aprecia o momento")
                 alert("Você cai no sono e acorda apenas quando está de noite, você volta para casa abraça a sua filha e vai dormir novamente")
                 alert("Você ganhou o item: paz de espirito")
+                alert("Voce ganhou 20 de vida")
                 inventario.push("paz de espirito")
+                vida += 20
                 historia++
 
             }
             else {
-                alert("Você decide ir treinar")
-                alert("Você vai para o ginasio e treina a tarde inteira")
-                alert("Depois do treino você vai para casa e vai dormir")
-                alert("Você ganhou o item: cansaço")
-                alert("Você perdeu 1 de vida")
-                inventario.push("cansaço")
-                vida -= 1
+                alert("Você decide ficar em casa e descansar")
+                alert("Você se senta no sofa e começa a assitir uma serie durante o dia interio")
+                alert("Depois disso você vai para o quarto e começa a dormir")
+                alert("Você ganhou o item: descanso")
+                alert("Você ganhou 5 de vida")
+                inventario.push("descanso")
+                vida += 5
                 historia++
             }
         }
@@ -253,7 +255,7 @@ while (continuar != false) {
 
         }
         else if (historia == 8) {
-            alert("Os dias vão se passando deposi do teste")
+            alert("Os dias vão se passando depos do teste")
             alert("Você continua treinando para as olimpiadas toda semana")
             let pergunta6 = Number(prompt("O que você quer focar nos treinos: \n(1) Defesa \n(2) Ataque"))
             if (pergunta6 == 1) {
