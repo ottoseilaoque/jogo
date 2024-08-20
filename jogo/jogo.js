@@ -7,7 +7,8 @@ alert("Vamos começar a historia de Mahboubeh Barbari Yharfi")
 let continuar = true
 
 while (continuar != false) { //While para determinar quando o jogo acaba
-    let menu = (Number(prompt('O que deseja fazer: \n (1) Historia \n (2) Checar status \n (3) Desistir \n (4) Ultimo checkpoint')))
+    let menu = (Number(prompt('O que deseja fazer: \n (1) Historia \n (2) Checar status \n (3) Desistir \n (4) Ultimo checkpoint'))) // Faz uma pergunta ao jogador
+
     switch (menu) {
         case 1: //Primeira opção do menu
             primeira()
@@ -19,14 +20,14 @@ while (continuar != false) { //While para determinar quando o jogo acaba
             alert("Você desistiu de jogar")
             alert("Mesmo assim, obrigado por jogar")
             alert("Feito por: Otto Seibt Cambôa")
-            continuar = false
+            continuar = false // Encerra o codigo
             break
         case 4: //Quarta opção do menu
             alert("Você voltou ao ultimo checkpoint")
             alert("Você ganhou 1 de vida")
-            vida += 1
-            historia--
-            inventario.pop()
+            vida += 1 // Aumenta a vida do jogador
+            historia-- // Diminue a variavel historia
+            inventario.pop() //Remove um item do inventario
             break
 
     }
@@ -42,80 +43,82 @@ while (continuar != false) { //While para determinar quando o jogo acaba
         if (historia == 1) { // Verifica qual parte da historia será reproduzida
             alert("Você é uma mulher iraniana chamada Mahboubeh Barbari Yharfi")
             alert("Você e sua filha acabarem de sair de seu pais de origem para morrar na alemanha")
-            let pergunta1 = Number(prompt("Sua filha está na cozinha o que você quer fazer: \n(1) Comprimentar ela e sair \n(2) Tomar café com ela \n(3) Mandar ela lavar louça"))
+            let pergunta1 = Number(prompt("Sua filha está na cozinha o que você quer fazer: \n(1) Comprimentar ela e sair \n(2) Tomar café com ela \n(3) Mandar ela lavar louça")) // Faz uma pergunta ao jogador
+
 
             if (pergunta1 == 1) { // Primeira opção da primeira pergunta
                 alert("Você abraça a sua filha e a deseja um bom dia, pede para ela lavar a louça e você sai de casa")
                 alert("Você ganhou 5 de vida")
-                vida += 5
-                historia++
+                vida += 5 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
             } else if (pergunta1 == 2) { // Segunda opção da primeira pergunta
                 alert("Você para e toma café da manha com ela, pede para ela lavar a louça e depois você sai de casa")
                 alert("Você ganhou 10 de vida")
-                vida += 10
-                historia++
+                vida += 10 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel historia
             } else { // Terceira opção da primeira pergunta
                 alert("Você nem deu bom dia para a sua filha e ja mandou ela lavar a louça")
                 alert("Ela não gostou disso")
                 alert("Você perdeu 10 de vida")
-                vida -= 10
-                historia++
+                vida -= 10 // Diminue a vida do jogador
+                historia++ // Aumenta a variavel historia
             }
         }
         else if (historia == 2) { // Verifica qual parte da historia sera reproduzida
             alert("Depois de você sair de casa, você começa a ir em direção ao ginasio")
             alert("No caminho você encontra um morador de rua")
-            let pergunta2 = Number(prompt("O que você faz: \n(1) Dar dinheiro para ele \n(2) Chutar o morador de rua \n(3) Ignorar ele e ir embora"))
+            let pergunta2 = Number(prompt("O que você faz: \n(1) Dar dinheiro para ele \n(2) Chutar o morador de rua \n(3) Ignorar ele e ir embora")) // Faz uma pergunta ao jogador
 
-            if (pergunta2 == 1) {
+            if (pergunta2 == 1) { // Primeira opção da segunda pergunta
                 alert("Você dá dinheiro para o morador de rua ele está feliz e te da um presente")
                 alert("Você ganhou 5 de vida ")
                 alert("Você ganhou o item: empatia")
-                inventario.push("empatia")
-                vida += 5
-                historia++
+                inventario.push("empatia") // Coloca um item no inventario
+                vida += 5 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel da historia
             }
-            else if (pergunta2 == 2) {
+            else if (pergunta2 == 2) { // Segunda opção da segunda pergunta
                 alert("Por algum motivo, você chutou o morador de rua")
                 alert("Quem faria isso ?")
                 alert("Você perdeu 10 de vida")
-                vida -= 10
-                historia++
+                vida -= 10 // Diminue a vida do jogador
+                historia++ // Aumenta a variavel da historia
             }
-            else {
+            else { // Terceira opção da segunda pergunta
                 alert("Você ignorou o morador de rua e continuo andando")
-                inventario.push("ignorou o morador de rua")
-                historia++
+                inventario.push("ignorou o morador de rua") // Coloca um item no inventario
+                historia++ // Aumenta a variavel da historia
             }
         }
-        else if (historia == 3) {
+        else if (historia == 3) {  // Verifica qual parte da historia sera reproduzida
             alert("Você chegou no ginasio")
             alert("Você encontra seu treinador")
-            let pergunta3 = Number(prompt("Seu treinador pergunta o você quer fazer: \n(1) Levantar peso \n(2) Treinar golpes \n(3) Converçar com ele"))
-            if (pergunta3 == 1) {
+            let pergunta3 = Number(prompt("Seu treinador pergunta o você quer fazer: \n(1) Levantar peso \n(2) Treinar golpes \n(3) Converçar com ele")) // Faz uma pergunta ao jogador
+
+            if (pergunta3 == 1) { // Primeira opção da terceira pergunta
                 alert("Você levanta peso")
                 alert("Você ganhou 5 de vida")
-                vida += 5
-                historia++
+                vida += 5 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel da historia
             }
-            else if (pergunta3 == 2) {
+            else if (pergunta3 == 2) { // Segunda opção da terceira pergunta
                 alert("Você treina golpes")
                 alert("Você ganhou 10 de vida")
-                vida += 10
-                historia++
+                vida += 10 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel da historia
             }
-            else {
+            else { // Terceira opção da terceira pergunta
                 alert("Você converçou com seu treinador")
                 alert("Treinador: \n Seu desepenho nos ultimos dias está sendo muito bons Mahboubeh, continue sempre assim.")
                 alert("Você ganhou o item: determinação")
                 alert("Você ganhou 5 de vida")
-                inventario.push("determinação")
-                vida += 5
-                historia++
+                inventario.push("determinação") // Coloca um item no inventario
+                vida += 5 // Aumenta a vida do jogador
+                historia++ // Aumenta a variavel da historia
             }
 
         }
-        else if (historia == 4) {
+        else if (historia == 4) { // Verifica qual parte da historia sera reproduzida
             alert("Após o treino, você começa voltar para casa")
             alert("No caminho você encontra o mesmo morador de rua de antes")
             alert("Só que destá vez ele está com outros 5 moradores de rua")
