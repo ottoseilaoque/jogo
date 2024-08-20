@@ -149,7 +149,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
         else if (historia == 5) { // Verifica qual parte da historia sera reproduzida
             alert("Depois de encontrar os moradores rua você volta para casa")
             alert("Quando você chega em casa, sua filha ainda não lavou a louça")
-            let pergunta4 = Number(prompt("O que você faz: \n(1) lava a louça você mesmo \n(2) Castigo \n(3) Pergunta por que ela não lavou a louça"))
+            let pergunta4 = Number(prompt("O que você faz: \n(1) lava a louça você mesmo \n(2) Castigo \n(3) Pergunta por que ela não lavou a louça")) // Faz uma pergunta ao jogador
             if (pergunta4 == 1) {
                 alert("Decepicionada com a sua filha, você começa a lavar a louça")
                 alert("Você perdeu 2 de vida")
@@ -163,15 +163,15 @@ while (continuar != false) { //While para determinar quando o jogo acaba
             else {
                 alert("Você entra no quarta de sua filha e pergunta por que ela não lavou a louça")
                 alert("Filha: Me desculpa mãe, eu estava ocupada fazendo tarefas da escola, eu não tive tempo")
-                let perguntaF = prompt("Filha: Você me perdoa ? (S/N)")
-                if (perguntaF == "S") {
+                let perguntaF = prompt("Filha: Você me perdoa ? (S/N)") // Faz uma pergunta ao jogador
+                if (perguntaF == "S") { // Primeira opção da pergunta de sua filha
                     alert("Você decide perdoar a sua filha")
                     alert("Ela te da um abraço e vai lavar a louça depois disso")
                     alert("Você ganhou 20 de vida")
                     vida += 20 // Aumenta a vida do jogador
                     historia++ // Aumenta a variavel historia
                 }
-                else {
+                else { // Segunda opção da pergunta da filha
                     alert("Você não perdoa a sua filha")
                     alert("Ela te manda a merda por não entender ela e você a coloca de castigo")
                     alert("Você perdeu 20 de vida")
@@ -188,8 +188,8 @@ while (continuar != false) { //While para determinar quando o jogo acaba
             alert("Treinador: \n Mahboubeh, você foi convidada a participar das olimpiadas de 2024, no time dos refugiados !")
             alert("Um representante do time vira amanha para te ver treinando e te convidar formalmente para as olimpiadas")
             alert("Use esse dia para descansar para mostrar seu treinamento totalemente descansada")
-            let pergunta5 = Number(prompt("O que você deseja fazer hoje: \n(1) Ir treinar  \n(2) Sair para fazer alguma coisa \n(3) Descansar em casa"))
-            if (pergunta5 == 1) {
+            let pergunta5 = Number(prompt("O que você deseja fazer hoje: \n(1) Ir treinar  \n(2) Sair para fazer alguma coisa \n(3) Descansar em casa")) // Faz uma pergunta ao jogador
+            if (pergunta5 == 1) { // primeira opção da quinta pergunta
                 alert("Você decide ir treinar")
                 alert("Você vai para o ginasio e treina a tarde inteira")
                 alert("Depois do treino você vai para casa e vai dormir")
@@ -199,7 +199,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 vida -= 1 // Diminue a vida do jogador
                 historia++ // Aumenta a variavel historia
             }
-            else if (pergunta5 == 2) {
+            else if (pergunta5 == 2) { // segunda opção da quinta pergunta
                 alert("Você decide sair para fazer alguma coisa")
                 alert("Você decide dar uma caminhada e tomar um café")
                 alert("Depois do café você vai a um parque, o parque está praticamente vazio")
@@ -213,7 +213,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 historia++ // Aumenta a variavel historia
 
             }
-            else {
+            else { // terceira opção da quinta pergunta
                 alert("Você decide ficar em casa e descansar")
                 alert("Você se senta no sofa e começa a assitir uma serie durante o dia interio")
                 alert("Depois disso você vai para o quarto e começa a dormir")
@@ -227,7 +227,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
         else if (historia == 7) { // Verifica qual parte da historia sera reproduzida
             alert("No dia seguinte, você toma cafe da manha com sua filha e vai direto para o ginasio")
             alert("Lá você encontra o seu treinador e o representante do time de refugiados")
-            if (inventario.includes("descanso")) {
+            if (inventario.includes("descanso")) { // Verifica se o inventario tem um item especifico para progredir a historia
                 alert("O representante pede para você fazer uma demonstração de golpes com o seu treinador")
                 alert("Como você estava descansada você executou os golpes corretamentes")
                 alert("Você passou no teste")
@@ -236,7 +236,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 historia++ // Aumenta a variavel historia
 
             }
-            else if (inventario.includes("paz de espirito")) {
+            else if (inventario.includes("paz de espirito")) { // Verifica se o inventario tem um item especifico para progredir a historia
                 alert("O representante pede para você fazer uma demonstração de golpes com o seu treinador")
                 alert("Como você alcansou a paz de espirito você executou os golpes com perfeição")
                 alert("O representante praticamente implorou para você entrar no time")
@@ -245,14 +245,14 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 vida += 30 // Aumenta a vida do jogador
                 historia++ // Aumenta a variavel historia
             }
-            else {
+            else { // Verifica se o inventario tem um item especifico para progredir a historia
                 alert("O representante pede para você fazer uma demonstração de golpes com o seu treinador")
                 alert("Como você estava cançada você não conseguiu executar os golpes corretamente")
                 alert("Por isso você não foi aprovado para o time dos refugiados")
                 alert("Esse é o fim")
                 alert("Obrigado por jogar")
                 alert("Feito por: Otto Seibt Cambôa")
-                continuar = false
+                continuar = false // Encerra o codigo
 
             }
 
@@ -260,8 +260,8 @@ while (continuar != false) { //While para determinar quando o jogo acaba
         else if (historia == 8) { // Verifica qual parte da historia sera reproduzida
             alert("Os dias vão se passando depos do teste")
             alert("Você continua treinando para as olimpiadas toda semana")
-            let pergunta6 = Number(prompt("O que você quer focar nos treinos: \n(1) Defesa \n(2) Ataque"))
-            if (pergunta6 == 1) {
+            let pergunta6 = Number(prompt("O que você quer focar nos treinos: \n(1) Defesa \n(2) Ataque")) // Faz uma pergunta ao jogador
+            if (pergunta6 == 1) { // primeira opção da quinta pergunta
                 alert("Você decide focar na sua defesa")
                 alert("Graças aos seus treinos de defesa e seus treinos de levantamento de peso, sua defesa fica extremamente eficaz")
                 alert("Você se sente preparada para as olimpiadas de 2024")
@@ -269,7 +269,7 @@ while (continuar != false) { //While para determinar quando o jogo acaba
                 inventario.push("confiança") // Coloca um item no inventario
                 historia++ // Aumenta a variavel historia
             }
-            else {
+            else { // segunda opção da sexta pergunta
                 alert("Você decide focar na sua ofensiva")
                 alert("Graças aos seus treinos de ataque e sus treinos de levantamento de peso, seus ataques ficam formidaveis")
                 alert("Você se sente preparada para as olimpiadas de 2024")
@@ -280,22 +280,22 @@ while (continuar != false) { //While para determinar quando o jogo acaba
         }
         else { // Verifica qual parte da historia sera reproduzida
             alert("Depois de muito tempo treinando...")
-            if (vida > 70 && inventario.includes("confiança")) {
+            if (vida > 70 && inventario.includes("confiança")) { // Verifica se o inventario tem um item especifico e se a vida está acima de 70 para progredir a historia
                 alert("Você finalmente chegou em paris para as olimpiadas")
                 alert("Todo o seu esforço valeu a pena")
                 alert("Pois você chegou aqui, parabens !")
                 alert("Esse é o fim")
                 alert("Obrigado por jogar")
                 alert("Feito por: Otto Seibt Cambôa")
-                continuar = false
+                continuar = false // Encerra o codigo
             }
-            else {
+            else { // Verifica se o inventario tem um item especifico e se a vida está acima de 70 para progredir a historia
                 alert("Por mais que você tenha passado no time, você não se classificou para as olimpiadas")
                 alert("Todo o seu esforço foi em vão")
                 alert("Esse é o fim")
                 alert("Obrigado por jogar")
                 alert("Feito por: Otto Seibt Cambôa")
-                continuar = false
+                continuar = false // Encerra o codigo
             }
 
         }
